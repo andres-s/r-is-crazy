@@ -46,3 +46,15 @@ R is crazy
 *   You're allowed to use periods `.` in variable names, but they are also used for method dispatch. Consider an
     object of class `test`; if it is passed to `t()`, `t.test()`, the T test function `t.test` will be called, which
     was not the intention.
+
+*   3 object oriented systems
+
+*   Just S3 is lots of fun:
+
+    *   Lazy evaluation except for the first argument to the generic if
+        `UseMethod` was only passed one argument: in this case, to determine
+        the correct dispatchee, the first argument to the generic needs to be
+        evaluated to find its class.
+
+    *   Generics, group generics and internal generics all have different
+        behaviours
