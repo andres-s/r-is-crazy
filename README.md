@@ -42,6 +42,8 @@ R is crazy
     ```
    
 *   Is it `sys.`, `Sys.` or `system.`?
+   
+*  `nchar(NA)` returns `2`
 
 *   You're allowed to use periods `.` in variable names, but they are also used for method dispatch. Consider an
     object of class `test`; if it is passed to `t()`, `t.test()`, the T test function `t.test` will be called, which
