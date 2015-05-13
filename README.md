@@ -60,3 +60,6 @@ R is crazy
 
     *   Generics, group generics and internal generics all have different
         behaviours
+
+*   Within a package, if you want code in one `R` file to be referred to in
+    another, the filenames need to be in alphabetical order.
