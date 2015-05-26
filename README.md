@@ -45,6 +45,8 @@ R is crazy
    
 *  `nchar(NA)` returns `2`
 
+*  `save` and `load` but `saveRDS` and `readRDS`
+
 *   You're allowed to use periods `.` in variable names, but they are also used for method dispatch. Consider an
     object of class `test`; if it is passed to `t()`, `t.test()`, the T test function `t.test` will be called, which
     was not the intention.
