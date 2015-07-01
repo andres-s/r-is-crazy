@@ -22,6 +22,12 @@ R is crazy
         }
         i()
         #> [1] TRUE TRUE
+        
+        j <- function(a, b) {
+          c(a, b)
+        }
+        j()
+        #> Error in j() : argument "a" is missing, with no default
         ```
 
 *   The names of base types are not used consistently throughout R, and type and
