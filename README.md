@@ -65,3 +65,9 @@ R is crazy
 
 *   Within a package, if you want code in one `R` file to be referred to in
     another, the filenames need to be in alphabetical order.
+
+*   ```r
+    # according to docs, as.Date.character defaults to %Y-%m-%d formats, but it has a very relaxed about it...
+    > as.Date('31/12/2000')
+    [1] "0031-12-20"
+    ```
