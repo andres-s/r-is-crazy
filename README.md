@@ -33,13 +33,6 @@ R is crazy
 *   The names of base types are not used consistently throughout R, and type and
     the corresponding “is” function may use different names:
     ```r
-    # The type of a function is "closure"
-    f <- function() {}
-    typeof(f)
-    #> [1] "closure"
-    is.function(f)
-    #> [1] TRUE
-    
     # The type of a primitive function is "builtin"
     typeof(sum)
     #> [1] "builtin"
