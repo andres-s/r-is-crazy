@@ -80,7 +80,8 @@ R is crazy
 
 *   if more than one field is specified in `group_by()`, then calling `summarise()` will only 'peel off' the last grouping field, rather than removing all the groups entirely:
     ```r
-    # Note the `grouped_df` class name and the `vars` attribute
+    # Note the `grouped_df` class name and the `vars` attribute in the output
+    
     mtcars %>% group_by(cyl, gear) %>% summarise(vol = n()) %>% str()
     #> Classes ‘grouped_df’, ‘tbl_df’, ‘tbl’ and 'data.frame': 8 obs. of  3 variables:
     #>  $ cyl : num  4 4 4 6 6 6 8 8
@@ -90,6 +91,7 @@ R is crazy
     #>   ..$ : symbol cyl
     #>  - attr(*, "drop")= logi TRUE
     ```
+    
     Consequently, to get the intuitive behaviour, it's good practice to always finish an aggregation by calling `ungroup()` (*even if we are only aggregating over one field*, because we might come back later and add a second grouping field):
     ```r
     mtcars %>% group_by(cyl, gear) %>% summarise(vol = n()) %>% ungroup() %>% str()
@@ -98,4 +100,5 @@ R is crazy
     #>  $ gear: num  3 4 5 3 4 5 3 5
     #>  $ vol : int  1 8 2 2 4 1 12 2
     ```
+    
     See also http://opiateforthemass.es/articles/groupby_summarize/.
