@@ -102,3 +102,9 @@ R is crazy
     ```
     
     See also http://opiateforthemass.es/articles/groupby_summarize/.
+ 
+    
+`magrittr` is crazy
+-------------------
+
+ *  [This](https://github.com/smbache/magrittr#the-argument-placeholder) would be great, but unfortunately, there's a [special case](https://github.com/smbache/magrittr#re-using-the-placeholder-for-attributes) that keeps tripping you up. This comes up all the time when you want to write code like like `iris %>% table(.$Species)`; you need to remember to put braces around it: `iris %>% {table(.$Species)}`.
